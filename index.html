@@ -63,7 +63,11 @@
     }
 
     function drag_end(event){
-        _('app_status').innerHTML = 'you let the '+event.tagert.getAttribute('id')+ 'go.'
+        if(droppedIn === false){
+            _('app_status').innerHTML = 'you let the '+event.tagert.getAttribute('id')+ 'go.';
+        }
+        droppedIn = false;
+        
     }
 
 
