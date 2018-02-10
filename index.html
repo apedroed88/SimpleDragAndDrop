@@ -7,14 +7,17 @@
     <title>SimpleDragAndDrop</title>
 </head>
 <style>
-    
+
 </style>
 <script>
 
 </script>
-
-
 <body>
-    
+    <h2 id="app _status">Appp status...</h2>
+    <div id="drop_zone" ondragenter="drag_enter(event)" ondrop="drop_event(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
+    <div id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
+    <div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
+    <div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
+
 </body>
 </html>
