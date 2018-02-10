@@ -35,6 +35,19 @@
         return document.getElementById(id);
     }
 
+    let droppedIn = false;
+
+    function drag_start(event){
+        _('app_status').innerHTML = 'Dragging the ' + event.tagert.getAttribute('id');
+        event.dataTransfer.dropEffect = 'move';
+        event.dataTransfer.setData('text', event.getAttribute('id'));
+
+    }
+
+    function drag_start(event){
+        _('app_status').innerHTML = 'You are dragging over the ' + event.tagert.getAttribute('id');
+    }
+
 </script>
 <body>
     <h2 id="app _status">Appp status...</h2>
