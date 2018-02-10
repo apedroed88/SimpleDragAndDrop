@@ -47,9 +47,19 @@
     function drag_start(event){
         _('app_status').innerHTML = 'You are dragging over the ' + event.tagert.getAttribute('id');
     }
-    
+
     function drag_leve(event){
         _('app_status').innerHTML = 'You left the ' + event.tagert.getAttribute('id');
+    }
+
+    function drag_drop(evnet){
+        event.preventDefault();
+        let elem_id = event.dataTransfer.getData('text');
+        event.target.appemdChild(_(elem_id));
+        _('app_status').innerHTML = 'Dropped '+ elem_id + ' into the '+ event.target.getAttribute('id');
+        _(elem_id).removeAttribute('draggable');
+        _(elem_id).style.cursor = 'default';
+        droppedIn = true;
     }
 
 
