@@ -62,6 +62,10 @@
         droppedIn = true;
     }
 
+    function drag_end(event){
+        _('app_status').innerHTML = 'you let the '+event.tagert.getAttribute('id')+ 'go.'
+    }
+
 
 
 </script>
