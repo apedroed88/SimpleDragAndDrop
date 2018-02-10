@@ -7,6 +7,27 @@
     <title>SimpleDragAndDrop</title>
 </head>
 <style>
+    .objects {
+        display: inline-block;
+        background-color: #fff3cc;
+        border: #dfbc6a 1px solid;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        padding: 8px;
+        font-size: 18px;
+        text-align: center;
+        box-shadow: 2px 2px 2px #999;
+        cursor: move;
+    }
+    #drop_zone {
+        background-color: #EEE;
+        border: #999 1px solid;
+        width: 280px;
+        height: 200px;
+        padding: 8px;
+        font-size: 18px;
+    }
 
 </style>
 <script>
@@ -17,8 +38,8 @@
     <h1>Drop zone</h1>
     <div id="drop_zone" ondragenter="drag_enter(event)" ondrop="drop_event(event)" ondragover="return false" ondragleave="drag_leave(event)" ></div>
     <div id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
-    <div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
-    <div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 1</div>
+    <div id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 2</div>
+    <div id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)">object 3</div>
     <hr>
     <button onclick="readDropZone()">Get object data</button>
 </body>
